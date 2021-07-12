@@ -4,10 +4,8 @@ import java.util.Scanner;
 
 public class Calc2 {
 	 
-	
 	public static void main(String[] args) throws java.io.IOException {
-		//String s[]= {"0","1","2","3","4","5","6","7","8","9"};
-
+		
 		System.out.println("Vvedite arifmeti4eskoe virazenie,");
 		System.out.println("neobhodimie 4isla ot 0 do 9");
 		System.out.println("i arifmeti4eskie operacii +, -, * ili /.");
@@ -24,28 +22,29 @@ public class Calc2 {
 		if ("0123456789".indexOf(s1) != -1) {
 			if ("0123456789".indexOf(s2) != -1) {
 						
-		switch(arif) {
-		case "+": result=i1+i2;
-    	System.out.print(result);
-    	break;
-		case "-": result=i1-i2;
-    	System.out.print(result);
-    	break;
-		case "*": result=i1*i2;
-    	System.out.print(result);
-    	break;
-		case "/": try {
-			result =i1/i2;
-			if (i1 % i2 == 0) {
-				System.out.print(result);
-			} else {
-				System.out.print(result + "; ");
-				System.out.print("Ostatoc: " + i1 % i2);}
-		}catch(ArithmeticException e) {
-			System.out.println("Delit' na 0 nelza!");
-		}
-		break;		
-    	}}else{System.out.println("Neobhodimie 4isla ot 0 do 9");}}else{System.out.println("Neobhodimie 4isla ot 0 do 9");}
+				switch(arif) {
+					case "+": result=i1+i2;
+					System.out.print(result);
+					break;
+					case "-": result=i1-i2;
+					System.out.print(result);
+					break;
+					case "*": result=i1*i2;
+					System.out.print(result);
+					break;
+					case "/": try {
+						result =i1/i2;
+						if (i1 % i2 == 0) {
+							System.out.print(result);
+						}else{
+							System.out.print(result + "; ");
+							System.out.print("Ostatoc: " + i1 % i2);}
+						}catch(ArithmeticException e) {
+							System.out.println("Delit' na 0 nelza!");}
+					break;		
+				}
+			}else{System.out.println("Neobhodimie 4isla ot 0 do 9");}
+		}else{System.out.println("Neobhodimie 4isla ot 0 do 9");}
 		
 		/*
 		char a1 = (char) System.in.read ();
