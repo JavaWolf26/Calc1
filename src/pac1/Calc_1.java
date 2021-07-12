@@ -7,7 +7,7 @@ public class Calc_1{
 	public static void main(String[] args) throws java.io.IOException{ 
 		
 		Scanner keyboard = new Scanner(System.in);
-		System.out.print("¬ведите арифметическую операцию: ");
+		System.out.print("Vvod arifmetic operacii: ");
 		char a1 = (char) System.in.read ();
 		char arifmetic = (char) System.in.read ();
 		char a2 = (char) System.in.read ();
