@@ -1,48 +1,53 @@
 package pac1;
 
-import static java.lang.System.out;
 import java.util.Scanner;
 
 public class Calc {
 
-	public static void main(String[] args) throws java.io.IOException {
+	public static void main(String[] args) { 
 		Scanner keyboard = new Scanner(System.in);
 		int Num1 = 0;
 		int Num2 = 0;
 		String Operation = null;
-		out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 10: ");
+		System.out.print("Введите первое число от 0 до 9: ");
 		Num1 = keyboard.nextInt();
-		if (Num1 < 0 || Num1 > 10) {
-			System.out.print("РћС€РёР±РєР°!");
-		} else if (Num1 > 0 && Num1 < 10) {
-			out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 10: ");
+		if (Num1 < 0 || Num1 > 9) {
+			System.out.print("Неверно!");
+		} else if (Num1 >= 0 && Num1 < 10) {{
+			System.out.print("Введите второе число от 0 до 9: ");
 			Num2 = keyboard.nextInt();}
-		if (Num2 < 0 || Num2 > 10) {
-			System.out.print("РћС€РёР±РєР°!");
-		} else if (Num2 > 0 && Num2 < 10) {{
-			out.println("РЈРєР°Р¶РёС‚Рµ РЅРµРѕР±С…РѕРґРёРјСѓСЋ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєСѓСЋ РѕРїРµСЂР°С†РёСЋ:");
-			out.print("'+', '-', '*', '/' ");
+		if (Num2 < 0 || Num2 > 9) {
+			System.out.print("Неверно!");
+		} else if (Num2 >= 0 && Num2 < 10) {{
+			System.out.println("Введите арифметическую операцию: ");
+			System.out.print("'+', '-', '*', '/' ");
 			Operation = keyboard.next();}
 		if (Operation.equals("+")) {
 			int NumRez = Num1 + Num2;
-			out.println(NumRez);
+			System.out.println(NumRez);
 		} else if (Operation.equals("-")) {
 			int NumRez = Num1 - Num2;
-			out.println(NumRez);
+			System.out.println(NumRez);
 		} else if (Operation.equals("*")) {
 			int NumRez = Num1 * Num2;
-			out.println(NumRez);
+			System.out.println(NumRez);
 		} else if (Operation.equals("/")) {
-			int NumRez = Num1 / Num2;
-			if (Num1 % Num2 == 0) {
-				out.print(NumRez);
-			} else {
-				out.print(NumRez + "; ");
-				out.print("РѕСЃС‚Р°С‚РѕРє РїСЂРё РґРµР»РµРЅРёРё: " + Num1 % Num2);}
-		} else {
-			System.out.println("РћС€РёР±РєР°!");
+				try {
+				int NumRez = Num1 / Num2;
+				if (Num1 % Num2 == 0) {
+					System.out.print(NumRez);
+				} else {
+					System.out.print(NumRez + "; ");
+					System.out.print("Остаток: " + Num1 % Num2);}
+			}catch(ArithmeticException e) {
+				System.out.println("Делить на 0 нельзя!");
+			}
+		}} else {
+			System.out.println("Неверно!");
+			}
 		}
 		keyboard.close();
-		}
 	}
 }
+
+
