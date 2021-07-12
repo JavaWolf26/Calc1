@@ -3,9 +3,15 @@ package pac1;
 import java.util.Scanner;
 
 public class Calc2 {
-
+	 
+	
 	public static void main(String[] args) throws java.io.IOException {
-		System.out.println("Vvedite arifmeti4eskoe virazenie:");
+		//String s[]= {"0","1","2","3","4","5","6","7","8","9"};
+
+		System.out.println("Vvedite arifmeti4eskoe virazenie,");
+		System.out.println("neobhodimie 4isla ot 0 do 9");
+		System.out.println("i arifmeti4eskie operacii +, -, * ili /.");
+		System.out.println("Vvedite 4isla i operacii 4erez probel:");
 		Scanner in = new Scanner(System.in);
 		String s1 = in.next();
 		String arif = in.next();
@@ -15,6 +21,9 @@ public class Calc2 {
 		int i2 = Integer.parseInt(s2);
 		int result;
 		
+		if ("0123456789".indexOf(s1) != -1) {
+			if ("0123456789".indexOf(s2) != -1) {
+						
 		switch(arif) {
 		case "+": result=i1+i2;
     	System.out.print(result);
@@ -36,9 +45,7 @@ public class Calc2 {
 			System.out.println("Delit' na 0 nelza!");
 		}
 		break;		
-    	}
-		
-		
+    	}}else{System.out.println("Neobhodimie 4isla ot 0 do 9");}}else{System.out.println("Neobhodimie 4isla ot 0 do 9");}
 		
 		/*
 		char a1 = (char) System.in.read ();
