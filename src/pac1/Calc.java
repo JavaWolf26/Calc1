@@ -9,17 +9,17 @@ public class Calc {
 		int Num1 = 0;
 		int Num2 = 0;
 		String Operation = null;
-		System.out.print("Введите первое число от 0 до 9: ");
+		System.out.print("Vvedite pervoe 4islo ot 0 do 9: ");
 		Num1 = keyboard.nextInt();
 		if (Num1 < 0 || Num1 > 9) {
-			System.out.print("Неверно!");
+			System.out.print("Neverno!");
 		} else if (Num1 >= 0 && Num1 < 10) {{
-			System.out.print("Введите второе число от 0 до 9: ");
+			System.out.print("Vvedite vtoroe 4islo ot 0 do 9: ");
 			Num2 = keyboard.nextInt();}
 		if (Num2 < 0 || Num2 > 9) {
 			System.out.print("Неверно!");
 		} else if (Num2 >= 0 && Num2 < 10) {{
-			System.out.println("Введите арифметическую операцию: ");
+			System.out.println("Vvod arifmetic operacii: ");
 			System.out.print("'+', '-', '*', '/' ");
 			Operation = keyboard.next();}
 		if (Operation.equals("+")) {
@@ -38,12 +38,12 @@ public class Calc {
 					System.out.print(NumRez);
 				} else {
 					System.out.print(NumRez + "; ");
-					System.out.print("Остаток: " + Num1 % Num2);}
+					System.out.print("Ostatoc: " + Num1 % Num2);}
 			}catch(ArithmeticException e) {
-				System.out.println("Делить на 0 нельзя!");
+				System.out.println("Delit' na 0 nelza!");
 			}
 		}} else {
-			System.out.println("Неверно!");
+			System.out.println("Neverno!");
 			}
 		}
 		keyboard.close();
