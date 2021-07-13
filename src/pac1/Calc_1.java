@@ -7,11 +7,11 @@ public class Calc_1 {
 	
 	public static void main(String[] args) throws java.io.IOException {
 		
-		String rim[]= {"0","I","II","III","IV","V","VI","VII","VIII","IX"};
-		//String arab[]= {"0","1","2","3","4","5","6","7","8","9"};
-		
+		String cifra[]= {"0","1","2","3","4","5","6","7","8","9","I","II","III","IV","V","VI","VII","VIII","IX"};
+				
 		System.out.println("Vvedite arifmeti4eskoe virazenie,");
-		System.out.println("neobhodimie rimskie 4isla ot 0 do IX");
+		System.out.println("neobhodimi arabskie 4isla ot 0 do 9");
+		System.out.println("ili rimskie 4isla ot I do IX");
 		System.out.println("i arifmeti4eskie operacii +, -, * ili /.");
 		System.out.println("Vvedite 4isla i operacii 4erez probel:");
 		
@@ -24,14 +24,18 @@ public class Calc_1 {
 		int result;
 		
 		switch(str1) {
-		case "0": case "I": case "II": case "III": case "IV":
-		case "V": case "VI": case "VII": case "VIII": case "IX":
-			i1=Arrays.asList(rim).indexOf(str1);
+		case "0": case "1": case "2": case "3": case "4": case "5": case "6":  
+		case "7": case "8": case "9": case "I": case "II": case "III": 
+		case "IV":	case "V": case "VI": case "VII": case "VIII": case "IX":
+			
+			i1=Arrays.asList(cifra).indexOf(str1);
+			
 						
 			switch(str2) {
-			case "0": case "I": case "II": case "III": case "IV":
-			case "V": case "VI": case "VII": case "VIII": case "IX":
-				i2=Arrays.asList(rim).indexOf(str2);
+			case "0": case "1": case "2": case "3": case "4": case "5": case "6":  
+			case "7": case "8": case "9": case "I": case "II": case "III": 
+			case "IV":	case "V": case "VI": case "VII": case "VIII": case "IX":
+				i2=Arrays.asList(cifra).indexOf(str2);
 								
 				switch(arif) {
 				case "+": result=i1+i2;
@@ -56,10 +60,10 @@ public class Calc_1 {
 				default:System.out.println("Neobhodimi arifmeti4eskie operacii +, -, * ili /.");
 				}
 			break;
-			default:System.out.println("Neobhodimi rimskie 4isla");
+			default:System.out.println("Neobhodimi arabskie 4isla ot 0 do 9 ili rimskie 4isla ot I do IX");
 			}
 		break;
-		default:System.out.println("Neobhodimi rimskie 4isla");
+		default:System.out.println("Neobhodimi arabskie 4isla ot 0 do 9 ili rimskie 4isla ot I do IX");
 		}
 		in.close();
 	}
