@@ -17,9 +17,9 @@ public class Calc {
 			System.out.print("Vvedite vtoroe 4islo ot 0 do 9: ");
 			Num2 = keyboard.nextInt();}
 		if (Num2 < 0 || Num2 > 9) {
-			System.out.print("Неверно!");
+			System.out.print("Neverno!");
 		} else if (Num2 >= 0 && Num2 < 10) {{
-			System.out.println("Vvod arifmetic operacii: ");
+			System.out.println("Vvedite arifmeti4eskuu operaciu: ");
 			System.out.print("'+', '-', '*', '/' ");
 			Operation = keyboard.next();}
 		if (Operation.equals("+")) {
@@ -42,9 +42,9 @@ public class Calc {
 			}catch(ArithmeticException e) {
 				System.out.println("Delit' na 0 nelza!");
 			}
-		}} else {
+		} else {
 			System.out.println("Neverno!");
-			}
+			}}
 		}
 		keyboard.close();
 	}
